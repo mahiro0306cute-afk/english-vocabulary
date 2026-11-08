@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1"><title>我了雷背单词</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><a class="brand" href="#"><span class="logo">✿</span><span>我了雷背单词<small>ENGLISH VOCABULARY</small></span></a><div class="date" id="today"></div></header>
+<main>
+ <section class="welcome"><div><p class="eyebrow">YOUR DAILY ENGLISH RITUAL</p><h1>每天一点点，<em>英语更自然。</em></h1><p class="sub">今天也为自己留一点学习时间吧。</p></div><div class="streak"><span>🌱</span><b id="streak">0</b><small>连续学习天数</small></div></section>
+ <nav class="main-nav"><button class="nav-link active" data-page="home">今日学习</button><button class="nav-link" data-page="library">全部单词 <span id="libraryCount"></span></button><button class="nav-link" data-page="quiz">随机测验</button></nav>
+ <section id="homePage"><section class="stats"><article><span class="stat-icon">📚</span><div><small>已学单词</small><b id="learned">0</b></div></article><article><span class="stat-icon">🎯</span><div><small>今日目标</small><b><span id="goalProgress">0</span> / <span id="goal">5</span></b></div></article><article><span class="stat-icon">🔁</span><div><small>待复习错词</small><b id="wrongCount">0</b></div></article></section>
+ <section class="layout"><div class="primary"><div class="section-heading"><div><p class="eyebrow">TODAY'S WORDS</p><h2>今日词汇</h2></div><button class="text-button" id="goalBtn">⚙ 设置目标</button></div><div class="progress-track"><div id="bar"></div></div><p class="progress-caption" id="progressText">开始今天的学习吧</p><div class="card" id="wordCard"></div><div class="actions"><button class="btn secondary" id="prev">← 上一个</button><button class="btn primary-btn" id="next">记住了，继续 →</button></div><div class="mode-tabs"><button class="tab active" data-mode="learn">单词卡</button><button class="tab" data-mode="spell">拼写测试</button><button class="tab" data-mode="review">错词复习 <span id="tabWrong">0</span></button></div><div id="practice" class="practice"></div></div>
+ <aside><div class="side-card"><div class="side-title"><h3>本周学习</h3><span>近 7 天</span></div><div class="week" id="week"></div><div class="week-total"><b id="weekTotal">0</b><span>个单词已掌握</span></div></div><div class="side-card tip"><div class="tip-art" aria-hidden="true"><span>✦</span><b>ABC</b><i>✿</i></div><h3>学习小贴士</h3><p>试着大声读出例句里的单词。把词语放进真实语境，更容易记住它。</p></div><div class="side-card"><div class="side-title"><h3>你的学习</h3><span>自动保存</span></div><p class="muted">学习记录只保存在这台设备的浏览器中。</p><button class="text-button reset" id="reset">重置学习记录</button></div></aside></section></section>
+ <section id="libraryPage" class="page-panel" hidden><div class="library-head"><div><p class="eyebrow">YOUR WORD COLLECTION</p><h2>全部单词</h2><p class="sub">搜索释义、例句，按等级筛选并开始学习。</p></div><div class="library-art" aria-hidden="true">📖<span>✦</span></div></div><div class="library-tools"><input id="wordSearch" placeholder="搜索英文、中文或例句…"><select id="levelFilter"><option value="all">全部等级</option><option>B1</option><option>B2</option></select><select id="sortWords"><option value="az">按字母排序</option><option value="level">按等级排序</option></select></div><p class="result-count" id="resultCount"></p><div id="wordList" class="word-list"></div></section>
+ <section id="quizPage" class="page-panel" hidden><div class="library-head"><div><p class="eyebrow">QUICK PRACTICE</p><h2>随机测验</h2><p class="sub">根据中文释义，输入正确的英文单词。</p></div><div class="library-art">🎯<span>✦</span></div></div><div id="quizCard" class="quiz-card"></div></section>
+</main><footer>慢慢来，每个新词都是一次小小的进步。 <span>✿</span></footer><script src="app.js" defer></script></body></html>
